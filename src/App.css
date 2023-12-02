@@ -33,11 +33,11 @@ a {
   filter: blur(0.75px);
 }
 .navBar .links {
-  padding-right: 2vw;
+  padding-right: 16vw;
   width: 60vw;
   height: 100px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   gap: 40px;
   background: rgba(95, 115, 229, 0.044);
@@ -90,7 +90,7 @@ a {
 }
 .home .main .main-r {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 .home .main .main-r .circle {
   width: 220px;
@@ -109,11 +109,6 @@ a {
 
 .destination {
   background-image: url("/src/assets/destination/background-destination-desktop.jpg");
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.destination .main {
   overflow: hidden;
 }
 .destination .main .destinationContent .destinationFlex {
@@ -130,7 +125,7 @@ a {
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   font-size: 24px;
 }
 .destination .main .destinationContent .destinationFlex .destinationText .destinationTabs {
@@ -168,13 +163,13 @@ a {
 .destination .main .destinationContent .destinationFlex .destinationText .bottom .distance {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 10px;
 }
 .destination .main .destinationContent .destinationFlex .destinationText .bottom .time {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 10px;
 }
 .destination .main .destinationContent .destinationFlex .destinationText .bottom .distance h3,
@@ -196,9 +191,122 @@ a {
 .crew {
   background-image: url("/src/assets/crew/background-crew-desktop.jpg");
 }
+.crew .main .crewContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.crew .main .crewContent .crewText {
+  height: 100vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.crew .main .crewContent .crewText h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.crew .main .crewContent .crewText h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+.crew .main .crewContent .crewText p {
+  width: 75%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.crew .main .crewContent .crewText .crewTabs {
+  margin-top: 30px;
+  gap: 30px;
+  display: flex;
+}
+.crew .main .crewContent .crewText .crewTabs .crewTab {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: gray;
+}
+.crew .main .crewContent .crewText .crewTabs .crewTab:hover {
+  cursor: pointer;
+}
+.crew .main .crewContent .crewText .crewTabs .activeTab {
+  background: white;
+}
+.crew .main .crewContent .crewImage {
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+}
+.crew .main .inactive {
+  display: none;
+}
 
 .technology {
   background-image: url("/src/assets/technology/background-technology-desktop.jpg");
+}
+.technology .main .techContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.technology .main .techContainer .techContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.technology .main .techContainer .techContent .techText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: auto;
+}
+.technology .main .techContainer .techContent .techText h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.technology .main .techContainer .techContent .techText h1 {
+  margin: 20px 0 20px 0;
+  font-size: 60px;
+  font-weight: 300;
+}
+.technology .main .techContainer .techContent .techText p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.technology .main .techContainer .techContent .techImage {
+  display: flex;
+  justify-content: flex-end;
+}
+.technology .main .techContainer .inactive {
+  display: none;
+}
+.technology .main .techTabs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 10vw;
+  margin-right: 5vw;
+}
+.technology .main .techTabs .techTab {
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technology .main .techTabs .techTab h1 {
+  color: white;
+  font-size: 48px;
+}
+.technology .main .techTabs .activeTab {
+  background: white;
+}
+.technology .main .techTabs .activeTab h1 {
+  color: black;
 }
 
 section {
@@ -209,8 +317,23 @@ section {
   justify-content: space-around;
 }
 
+.headerTitle {
+  position: fixed;
+  top: 18vh;
+  left: 8.5vw;
+}
+.headerTitle h1 {
+  font-size: 24px;
+  color: white;
+  display: flex;
+  gap: 16px;
+}
+.headerTitle h1 span {
+  color: gray;
+}
+
 .slideIn {
-  animation: slideIn 2s;
+  animation: slideIn 2s ease-out;
 }
 
 .slideOut {
@@ -227,7 +350,7 @@ section {
 }
 @keyframes slideIn {
   0% {
-    transform: translateX(80vw) scale(0.5) translateY(-300px) rotate(-90deg);
+    transform: translateX(80vw) scale(0.5) translateY(-300px) rotate(-45deg);
   }
   100% {
     transform: translateX(0) scale(1) translateY(0) rotate(0deg);

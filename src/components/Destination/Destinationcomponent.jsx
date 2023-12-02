@@ -3,7 +3,6 @@ import { useState } from "react";
 export default function DestinationComponent({ data }) {
   const destinations = data.destinations;
   const [activeTab, setActiveTab] = useState("Moon");
-  const [lastActiveTab, setLastActiveTab] = useState("");
 
   function renderDestination(destination) {
     setActiveTab(destination);

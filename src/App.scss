@@ -37,11 +37,11 @@ $technologyDesktopBg: url("/src/assets/technology/background-technology-desktop.
     }
   }
   .links {
-    padding-right: 2vw;
+    padding-right: 16vw;
     width: 60vw;
     height: $navBarHeight;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
     gap: 40px;
     background: rgba(95, 115, 229, 0.044);
@@ -91,7 +91,7 @@ $technologyDesktopBg: url("/src/assets/technology/background-technology-desktop.
     }
     .main-r {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       .circle {
         width: 220px;
         height: 220px;
@@ -111,14 +111,11 @@ $technologyDesktopBg: url("/src/assets/technology/background-technology-desktop.
 }
 .destination {
   background-image: $destinationDesktopBg;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow: hidden;
   .main {
-    overflow: hidden;
     .destinationContent {
       .destinationFlex {
-        display:grid;
+        display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 40px;
@@ -130,20 +127,20 @@ $technologyDesktopBg: url("/src/assets/technology/background-technology-desktop.
           text-align: left;
           display: flex;
           flex-direction: column;
-          align-items: start;
+          align-items: flex-start;
           font-size: 24px;
-          .destinationTabs{
-            display:flex;
+          .destinationTabs {
+            display: flex;
             gap: 30px;
             height: 70px;
             margin-bottom: 20px;
-            .destinationTab{
-              height:100%;
+            .destinationTab {
+              height: 100%;
             }
-            .destinationTab:hover{
-              cursor:pointer;
+            .destinationTab:hover {
+              cursor: pointer;
             }
-            .active{
+            .active {
               border-bottom: 4px solid white;
             }
           }
@@ -166,13 +163,13 @@ $technologyDesktopBg: url("/src/assets/technology/background-technology-desktop.
             .distance {
               display: flex;
               flex-direction: column;
-              align-items: start;
+              align-items: flex-start;
               gap: 10px;
             }
             .time {
               display: flex;
               flex-direction: column;
-              align-items: start;
+              align-items: flex-start;
               gap: 10px;
             }
             .distance h3,
@@ -199,10 +196,129 @@ $technologyDesktopBg: url("/src/assets/technology/background-technology-desktop.
 
 .crew {
   background-image: $crewDesktopBg;
+  .main {
+    .crewContent {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      .crewText {
+        height: 100vh;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+          font-size: 32px;
+          margin-bottom: 20px;
+          font-weight: 400;
+        }
+        h1 {
+          font-size: 42px;
+          margin-bottom: 30px;
+        }
+        p {
+          width: 75%;
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+        .crewTabs {
+          margin-top: 30px;
+          gap: 30px;
+          display: flex;
+          .crewTab {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: gray;
+          }
+          .crewTab:hover {
+            cursor: pointer;
+          }
+          .activeTab {
+            background: white;
+          }
+        }
+      }
+      .crewImage {
+        display: flex;
+        align-items: flex-end;
+        height: 100vh;
+      }
+    }
+    .inactive {
+      display: none;
+    }
+  }
 }
 
 .technology {
   background-image: $technologyDesktopBg;
+  .main {
+    .techContainer{
+      display:flex;
+      justify-content: space-between;
+      .techContent{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        .techText{
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: auto;
+          h2{
+            font-size: 20px;
+            font-weight: 300;
+          }
+          h1{
+            margin: 20px 0 20px 0;
+            font-size: 60px;
+            font-weight: 300;
+          }
+          p{
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 30px;
+          }
+        }
+        .techImage{
+          display:flex;
+          justify-content: flex-end;
+        }
+      }
+      .inactive{
+        display: none;
+      }
+    }
+
+    .techTabs{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-left: 10vw;
+      margin-right: 5vw;
+    .techTab {
+      cursor: pointer;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 1px solid white;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      h1{
+        color:white;
+        font-size: 48px;
+      }
+    }
+    .activeTab{
+      background: white;
+      h1{
+      color:black;
+    }
+    }
+  }
+  }
+  
 }
 
 section {
@@ -213,8 +329,23 @@ section {
   justify-content: space-around;
 }
 
+.headerTitle {
+  position: fixed;
+  top: 18vh;
+  left: 8.5vw;
+  h1 {
+    font-size: 24px;
+    color: white;
+    display: flex;
+    gap: 16px;
+    span {
+      color: gray;
+    }
+  }
+}
+
 .slideIn {
-  animation: slideIn 2s;
+  animation: slideIn 2s ease-out;
 }
 .slideOut {
   animation: slideOut 2s;
@@ -229,7 +360,7 @@ section {
 }
 @keyframes slideIn {
   0% {
-    transform: translateX(80vw) scale(0.5) translateY(-300px) rotate(-90deg);
+    transform: translateX(80vw) scale(0.5) translateY(-300px) rotate(-45deg);
   }
   100% {
     transform: translateX(0) scale(1) translateY(0) rotate(0deg);
