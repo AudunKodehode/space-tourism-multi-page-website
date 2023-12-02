@@ -10,7 +10,7 @@ export default function DestinationComponent({ data }) {
 
   return (
     <>
-    
+
       <div className="destinationTabs">
         {destinations.map((dst) => (
           <div
@@ -19,7 +19,7 @@ export default function DestinationComponent({ data }) {
               dst.name === activeTab ? "active" : ""
             }`}
           >
-            <a href="#" onClick={() => renderDestination(dst.name)}>
+            <a onClick={() => renderDestination(dst.name)}>
               {dst.name.toUpperCase()}
             </a>
           </div>
