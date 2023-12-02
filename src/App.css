@@ -116,28 +116,9 @@ a {
 .destination .main {
   overflow: hidden;
 }
-.destination .main .destinationTabs {
-  display: flex;
-  gap: 30px;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-left: 40vw;
-  transform: translateY(200px);
-}
-.destination .main .destinationTabs .destinationTab {
-  height: 50px;
-}
-.destination .main .destinationTabs .destinationTab:hover {
-  cursor: pointer;
-}
-.destination .main .destinationTabs .active {
-  border-bottom: 4px solid white;
-}
 .destination .main .destinationContent .destinationFlex {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
   width: 100vw;
@@ -145,12 +126,27 @@ a {
 }
 .destination .main .destinationContent .destinationFlex .destinationText {
   z-index: 1;
-  width: 30vw;
-  padding: 40px;
+  width: 500px;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: start;
+  font-size: 24px;
+}
+.destination .main .destinationContent .destinationFlex .destinationText .destinationTabs {
+  display: flex;
+  gap: 30px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+.destination .main .destinationContent .destinationFlex .destinationText .destinationTabs .destinationTab {
+  height: 100%;
+}
+.destination .main .destinationContent .destinationFlex .destinationText .destinationTabs .destinationTab:hover {
+  cursor: pointer;
+}
+.destination .main .destinationContent .destinationFlex .destinationText .destinationTabs .active {
+  border-bottom: 4px solid white;
 }
 .destination .main .destinationContent .destinationFlex .destinationText h1 {
   font-size: 80px;
@@ -191,6 +187,7 @@ a {
 }
 .destination .main .destinationContent .destinationFlex .destinationImg {
   z-index: 0;
+  justify-self: center;
 }
 .destination .main .inactive {
   display: none;

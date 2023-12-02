@@ -9,9 +9,9 @@ export default function DestinationComponent({ data }) {
     setActiveTab(destination);
   }
 
-  return (
-    <>
-      <div className="destinationTabs">
+function destinationTabs(){
+    return (
+        <div className="destinationTabs">
         {destinations.map((dst) => (
           <div
             key={dst.name}
@@ -24,6 +24,13 @@ export default function DestinationComponent({ data }) {
           </div>
         ))}
       </div>
+    )
+}
+
+
+  return (
+    <>
+        
 
       {destinations.map((dst) => (
         <div
@@ -38,6 +45,7 @@ export default function DestinationComponent({ data }) {
             </div>
 
             <div className="destinationText">
+            {destinationTabs()}
               <h1>{dst.name.toUpperCase()}</h1>
               <p>{dst.description}</p>
               <div className="divider"></div>
