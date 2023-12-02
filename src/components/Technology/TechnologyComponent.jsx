@@ -50,10 +50,12 @@ export default function TechnologyComponent({ data }) {
               <h1>{tech.name.toUpperCase()}</h1>
               <p>{tech.description}</p>
             </div>
+            
 
             </div>
             <div className="techImage">
               <img src={`/src/${tech.images.portrait}`} alt="" />
+              
             </div>
           </div>
         ))}
