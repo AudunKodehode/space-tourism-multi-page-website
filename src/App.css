@@ -2,4 +2,129 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navBar {
+  position: fixed;
+  display: flex;
+  top: 50px;
+  right: 0;
+  justify-content: space-between;
+  z-index: 2;
+}
+.navBar .navLogo {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+}
+.navBar .navLogo .divider {
+  height: 1px;
+  background: rgb(170, 170, 170);
+  width: 40vw;
+  margin-left: 20px;
+  transform: translateX(50px);
+  z-index: 1;
+  filter: blur(0.75px);
+}
+.navBar .links {
+  width: 60vw;
+  height: 100px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 30px;
+  background: rgba(95, 115, 229, 0.044);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+}
+.navBar .links a {
+  color: white;
+  text-decoration: none;
+  height: 50px;
+}
+.navBar .links span {
+  font-weight: 700;
+}
+.navBar .links .active {
+  border-bottom: 4px solid white;
+}
+.navBar .links a:hover {
+  border-bottom: 4px solid rgba(255, 255, 255, 0.568);
+}
+.navBar .links .active:hover {
+  border-bottom: 4px solid white;
+}
+
+.home {
+  background-image: url("/src/assets/home/background-home-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.home .main {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  margin-top: 200px;
+}
+.home .main .main-l {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+.home .main .main-l h2 {
+  font-size: 32px;
+}
+.home .main .main-l h1 {
+  font-size: 120px;
+  padding: 20px;
+}
+.home .main .main-l p {
+  font-size: 20px;
+}
+.home .main .main-r {
+  display: flex;
+  align-items: end;
+}
+.home .main .main-r .circle {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+.home .main .main-r .circle h3 {
+  color: black;
+}
+
+.destination {
+  background-image: url("/src/assets/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.crew {
+  background-image: url("/src/assets/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.technology {
+  background-image: url("/src/assets/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
 }/*# sourceMappingURL=App.css.map */
