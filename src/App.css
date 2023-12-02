@@ -128,6 +128,9 @@ a {
 .destination .main .destinationTabs .destinationTab {
   height: 50px;
 }
+.destination .main .destinationTabs .destinationTab:hover {
+  cursor: pointer;
+}
 .destination .main .destinationTabs .active {
   border-bottom: 4px solid white;
 }
