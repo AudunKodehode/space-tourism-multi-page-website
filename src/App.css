@@ -124,6 +124,7 @@ a {
   height: -moz-fit-content;
   height: fit-content;
   margin-left: 40vw;
+  transform: translateY(200px);
 }
 .destination .main .destinationTabs .destinationTab {
   height: 50px;
@@ -136,11 +137,14 @@ a {
 }
 .destination .main .destinationContent .destinationFlex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 40px;
+  width: 100vw;
+  height: 100vh;
 }
 .destination .main .destinationContent .destinationFlex .destinationText {
+  z-index: 1;
   width: 30vw;
   padding: 40px;
   text-align: left;
@@ -185,6 +189,9 @@ a {
 .destination .main .destinationContent .destinationFlex .destinationText .bottom .time h2 {
   font-size: 40px;
 }
+.destination .main .destinationContent .destinationFlex .destinationImg {
+  z-index: 0;
+}
 .destination .main .inactive {
   display: none;
 }
@@ -206,26 +213,26 @@ section {
 }
 
 .slideIn {
-  animation: slideIn 1s;
+  animation: slideIn 2s;
 }
 
 .slideOut {
-  animation: slideOut 1s;
+  animation: slideOut 2s;
 }
 
-@keyframes slideIn {
+@keyframes slideOut {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-80vw) scale(0.5) translateY(300px);
   }
 }
 @keyframes slideIn {
   0% {
-    transform: translateX(100%);
+    transform: translateX(80vw) scale(0.5) translateY(-300px) rotate(-90deg);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) scale(1) translateY(0) rotate(0deg);
   }
 }/*# sourceMappingURL=App.css.map */
