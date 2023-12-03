@@ -3,7 +3,6 @@ export default function Home() {
   return (
     <>
       <section className="home">
-      <img src="/assets/image-launch-vehicle-portrait.jpg" alt="" />
         <div className="main">
           <div className="main-l">
             <h2>So, you want to travel to </h2>
@@ -16,12 +15,10 @@ export default function Home() {
             </p>
           </div>
           <div className="main-r">
-          <Link to="/destination">
-            <div className="circle">
-                <h3>
-              Explore
-              </h3>
-            </div>
+            <Link to="/destination">
+              <div className="circle">
+                <h3>Explore</h3>
+              </div>
             </Link>
           </div>
         </div>

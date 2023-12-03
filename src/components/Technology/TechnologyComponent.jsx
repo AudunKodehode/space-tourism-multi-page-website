@@ -51,7 +51,6 @@ export default function TechnologyComponent({ data }) {
               <p>{tech.description}</p>
             </div>
             
-
             </div>
             <div className="techImage">
               <img src={`/src/${tech.images.portrait}`} alt="" />
